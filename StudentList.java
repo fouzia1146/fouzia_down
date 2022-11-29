@@ -39,20 +39,20 @@ public class StudentList {
 			System.out.println("Loading data ...");			
 			try
 			{
-			BufferedWriter s = new BufferedWriter(new FileWriter("students.txt", true));
-			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("students.txt")));
-			String r = bufferedReader.readLine();
-			String t = args[0].substring(1);
-			r=r+", "+t;
-			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("students.txt"));
-			bufferedWriter.flush();
-			bufferedWriter.close();
-	        Date d = new Date();
-	        String df = "dd/mm/yyyy-hh:mm:ss a";
-	        DateFormat dateFormat = new SimpleDateFormat(df);
-	        String fd= dateFormat.format(d);
-			s.write(r+"\nList last updated on "+fd);
-			s.close();
+				BufferedWriter s = new BufferedWriter(new FileWriter("students.txt", true));
+				BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("students.txt")));
+				String r = bufferedReader.readLine();
+				String t = args[0].substring(1);
+				r=r+", "+t;
+				BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("students.txt"));
+				bufferedWriter.flush();
+				bufferedWriter.close();
+	        	Date d = new Date();
+	        	String df = "dd/mm/yyyy-hh:mm:ss a";
+	        	DateFormat dateFormat = new SimpleDateFormat(df);
+	        	String fd= dateFormat.format(d);
+				s.write(r+"\nList last updated on "+fd);
+				s.close();
 			} catch (Exception e){}
 			System.out.println("Data Loaded.");	
 		}
