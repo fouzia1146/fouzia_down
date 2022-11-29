@@ -8,11 +8,9 @@ public class StudentList {
 		if(args[0].equals("a")) {
 			System.out.println("Loading data ...");			
 			try {
-			BufferedReader s = new BufferedReader(
-					new InputStreamReader(
-							new FileInputStream("students.txt"))); 
+			BufferedReader s = new BufferedReader(new InputStreamReader(new FileInputStream("students.txt")));
 			String r = s.readLine();
-			String i[] = r.split(",");			
+			String i[] = r.split(", ");
 			for(String j : i) { System.out.println(j); }
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");
@@ -21,14 +19,11 @@ public class StudentList {
 		{
 			System.out.println("Loading data ...");			
 			try {
-			BufferedReader s = new BufferedReader(
-					new InputStreamReader(
-							new FileInputStream("students.txt"))); 
+			BufferedReader s = new BufferedReader(new InputStreamReader(new FileInputStream("students.txt")));
 			String r = s.readLine();
 			System.out.println(r);
-			String i[] = r.split(",");	
-			Random x = new Random();
-				int y = x.nextInt();
+			String i[] = r.split(", ");
+			int y = new Random().nextInt();
 					System.out.println(i[y]);
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");			
